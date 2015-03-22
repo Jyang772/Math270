@@ -1,0 +1,57 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{framed}
+
+\begin{document}
+\raggedright	
+
+Messing around with LaTeX. Glorious. 
+\linebreak
+
+\textbf{1.} Let V be the vector space of Real polynomials. Let $T : V_1 \rightarrow V_2$ be the transformation defined by: 
+	$$T(a_0 + a_1x +...+ a_nx^n) = a_0 + a_1x^2 +...+ a_nx^{n+1}$$
+
+Show that T is linear or explain why it is not.
+\linebreak\linebreak
+\textbf{Solution}
+
+Let $f(x)$ and $g(x)$ be real polynomials, and $a$ and $b$ are real scalars. 
+\begin{equation}
+\begin{split}
+T(f(x) + g(x)) &= x(f(x) + g(x))\\
+& = xf(x) + xg(x)  \\
+& = T(f(x)) + T(g(x)) \\
+\end{split}
+\end{equation}
+
+\textbf{2.} Find an orthonormal basis for the subspace of $\mathbb{R}^4$ spanned by the vectors:
+(1, 1, 0, 1) (1, 0, 2, 1) \& (1, 2, -2, 1)
+\linebreak\linebreak
+
+Let $\textbf{v}_1 = (1,1,0,1)$ and $\textbf{v}_2 = (1,0,2,1)$
+
+$\textbf{u}_1 = (1,1,0,1)$
+\begin{flalign}
+\textbf{u}_2 &= \textbf{v}_2 - \frac{\textbf{u}_1 \cdot \textbf{v}_2}{|\textbf{v}_2|^2} \textbf{u}_1\\
+\notag
+&= (1,0,2,1) - \frac{(1,1,0,1)\cdot(1,0,2,1)}{\sqrt{1^2+2^2+1^2}^2}(1,1,0,1)  \\ 
+\notag
+&= (1,0,2,1) - \frac{2}{3}(1,1,0,1)  \\
+\notag
+&= (\frac{1}{3},-\frac{2}{3},2,\frac{1}{3}) \\
+\notag
+&= \frac{1}{3}(1,-2,6,1)&
+\end{flalign}
+
+$\textbf{u}_1$ and $\textbf{u}_2$ form an orthogonal basis. Orthonormal basis is formed by multiplying the two vectors by the reciprocal of their lengths:
+\linebreak
+
+$$\frac{1}{3}\textbf{u}_1, \frac{1}{\sqrt{42}}\textbf{u}_2 = \boxed{\frac{1}{3}(1,1,0,1) , \frac{1}{\sqrt{42}}(1,-2,6,1)}$$
+
+
+
+
+
+\end{document}
